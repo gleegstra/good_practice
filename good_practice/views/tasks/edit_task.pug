@@ -1,0 +1,10 @@
+html
+    head
+        title Tareas 
+    body
+        p 
+            strong Creado por: 
+            span= task.user.email
+        form(action=`/tasks/${task.id}?_method=PUT` method="POST")
+            textarea(name="description" placeholder="Coloca aqui el pendiente a realizar")=task.description
+            input(type="submit" value="Guardar")

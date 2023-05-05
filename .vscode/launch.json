@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Iniciar el programa",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/good_practice/controllers/sessions.js"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Ejecutar el script: start",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}/cookies-sesiones"
+        }
+    ]
+}

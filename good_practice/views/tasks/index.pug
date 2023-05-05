@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title Tareas 
+    body
+        form(action='tasks/new' method="GET")   
+            input(type="submit" value="New Task") 
+        ul 
+        each task in tasks
+            li= task.description
+                form(action='tasks/'+task.id method="GET")   
+                    input(type="submit" value="Editar") 
+                form(action=`tasks/${task.id}?_method=DELETE` method="POST")   
+                    input(type="submit" value="Eliminar")                     

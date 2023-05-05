@@ -1,0 +1,12 @@
+doctype html
+html
+    head
+        title Categorias 
+    body
+        ul 
+        each category in categories
+            li= category.title
+                form(action='categories/'+category.id method="GET")   
+                    input(type="submit" value="Editar") 
+                form(action=`categories/${category.id}?_method=DELETE` method="POST")   
+                    input(type="submit" value="Eliminar")                     
